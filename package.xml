@@ -32,18 +32,20 @@ distributions, using extended crypt library (libxcrypt):
   <contents>
     <dir name="/">
       <!-- sources -->
-      <file name="config.m4" role="src"/>
-      <file name="php_xpass.h" role="src" />
-      <file name="xpass.c" role="src"/>
+      <dir name="ext">
+        <file name="config.m4" role="src"/>
+        <file name="php_xpass.h" role="src" />
+        <file name="xpass.c" role="src"/>
+        <dir name ="tests">
+          <file name="sha512.phpt" role="test"/>
+          <file name="xpass.phpt" role="test"/>
+          <file name="yescrypt.phpt" role="test"/>
+        </dir>
+      </dir>
       <!-- documentation -->
       <file name="CREDITS" role="doc"/>
       <file name="LICENSE" role="doc"/>
       <file name="README.md" role="doc"/>
-      <dir name ="tests">
-        <file name="sha512.phpt" role="test"/>
-        <file name="xpass.phpt" role="test"/>
-        <file name="yescrypt.phpt" role="test"/>
-      </dir>
     </dir>
   </contents>
   <dependencies>
