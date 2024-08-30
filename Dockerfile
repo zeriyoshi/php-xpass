@@ -41,7 +41,7 @@ ARG CFLAGS=""
 RUN if test -f "/etc/debian_version"; then \
       apt-get update && apt-get install -y "libtool"; \
     else \
-      apk add --no-cache "libtool" "automake"; \
+      apk add --no-cache "libtool" "automake" "linux-headers"; \
     fi \
  && git clone --depth=1 --branch="v4.4.36" "https://github.com/besser82/libxcrypt.git" "/libxcrypt" \
  && cd "/libxcrypt" \
